@@ -109,7 +109,8 @@ const Index = () => {
         </section>
       </main>
       
-      <style jsx>{`
+      <style>
+        {`
         /* Reset and Base Styles */
         * {
           margin: 0;
@@ -135,20 +136,22 @@ const Index = () => {
           left: 0;
           right: 0;
           z-index: 1000;
-          background-color: rgba(255, 255, 255, 0.8);
+          background-color: rgba(255, 248, 240, 0.85);
           backdrop-filter: blur(20px);
           transition: all 0.3s ease;
         }
         
         .navbar.scrolled {
           padding: 1rem 3rem;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 10px rgba(243, 156, 18, 0.15);
+          background-color: rgba(255, 248, 240, 0.95);
         }
         
         .logo {
           font-size: 1.5rem;
           font-weight: 600;
           letter-spacing: -0.5px;
+          color: #F97316;
         }
         
         .nav-links {
@@ -157,7 +160,7 @@ const Index = () => {
         }
         
         .nav-link {
-          color: #555;
+          color: #F97316;
           text-decoration: none;
           font-size: 0.95rem;
           font-weight: 500;
@@ -166,7 +169,7 @@ const Index = () => {
         }
         
         .nav-link:hover, .nav-link.active {
-          color: #000;
+          color: #EA580C;
         }
         
         .nav-link::after {
@@ -176,7 +179,7 @@ const Index = () => {
           left: 0;
           width: 0;
           height: 2px;
-          background-color: #000;
+          background-color: #EA580C;
           transition: width 0.3s ease;
         }
         
@@ -197,6 +200,7 @@ const Index = () => {
           min-height: 90vh;
           padding: 2rem 3rem;
           margin-top: 2rem;
+          background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
         }
         
         .hero-content {
@@ -210,11 +214,12 @@ const Index = () => {
           line-height: 1.2;
           margin-bottom: 1.5rem;
           letter-spacing: -1px;
+          color: #EA580C;
         }
         
         .hero-subtitle {
           font-size: 1.5rem;
-          color: #666;
+          color: #FB923C;
           margin-bottom: 2rem;
           line-height: 1.5;
         }
@@ -222,7 +227,7 @@ const Index = () => {
         .cta-button {
           padding: 0.75rem 2rem;
           font-size: 1rem;
-          background-color: #000;
+          background-color: #F97316;
           color: #fff;
           border: none;
           border-radius: 30px;
@@ -233,7 +238,8 @@ const Index = () => {
         
         .cta-button:hover {
           transform: translateY(-2px);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3);
+          background-color: #EA580C;
         }
         
         .hero-image {
@@ -246,9 +252,9 @@ const Index = () => {
         .image-placeholder {
           width: 450px;
           height: 450px;
-          background: linear-gradient(135deg, #f2f2f2 0%, #e6e6e6 100%);
+          background: linear-gradient(135deg, #FED7AA 0%, #FDBA74 100%);
           border-radius: 30px;
-          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 20px 60px rgba(249, 115, 22, 0.12);
           position: relative;
           overflow: hidden;
           transition: transform 0.5s ease;
@@ -261,7 +267,7 @@ const Index = () => {
         /* Features Section */
         .features-section {
           padding: 5rem 3rem;
-          background-color: #f8f8f8;
+          background-color: #FFF7ED;
         }
         
         .section-title {
@@ -270,6 +276,7 @@ const Index = () => {
           font-weight: 600;
           margin-bottom: 4rem;
           letter-spacing: -0.5px;
+          color: #EA580C;
         }
         
         .features-grid {
@@ -284,21 +291,35 @@ const Index = () => {
           background: white;
           padding: 2.5rem;
           border-radius: 20px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 10px 30px rgba(249, 115, 22, 0.08);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
+          border-left: 4px solid #F97316;
         }
         
         .feature-card:hover {
           transform: translateY(-10px);
-          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 15px 35px rgba(249, 115, 22, 0.12);
         }
         
         .feature-icon {
           width: 60px;
           height: 60px;
-          background: #f2f2f2;
+          background: #FFF7ED;
           border-radius: 15px;
           margin-bottom: 1.5rem;
+          position: relative;
+        }
+        
+        .feature-icon::before {
+          content: "";
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          background: linear-gradient(135deg, #F97316 0%, #FDBA74 100%);
+          border-radius: 10px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
         
         .feature-card h3 {
@@ -306,10 +327,11 @@ const Index = () => {
           font-weight: 600;
           margin-bottom: 1rem;
           letter-spacing: -0.5px;
+          color: #EA580C;
         }
         
         .feature-card p {
-          color: #666;
+          color: #FB923C;
           line-height: 1.6;
         }
         
@@ -384,7 +406,8 @@ const Index = () => {
             font-size: 2rem;
           }
         }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };
